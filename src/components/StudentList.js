@@ -15,11 +15,11 @@ function StudentList({ students, onDelete, onUpdate }) {
   };
 
   return (
-    <div >
+    <div className="student-list">
       {students.map(student => (
-        <div key={student.id} >
+        <div key={student.id} className="student-card">
           {editingId === student.id ? (
-            <div >
+            <div className="edit-form">
               <input
                 value={editStudent.name}
                 onChange={(e) => setEditStudent({ ...editStudent, name: e.target.value })}
