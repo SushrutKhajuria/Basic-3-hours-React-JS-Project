@@ -7,11 +7,11 @@ function AddStudent({ onAdd }) {
     e.preventDefault();
     if (!student.name || !student.mobile || !student.address) return;
     onAdd(student);
-    setStudent({ name: '', mobile: '', address: '' }); 
+    setStudent({ name: '', mobile: '', address: '' }); // Reset form
   };
 
   return (
-    <form onSubmit={handleSubmit} >
+    <form onSubmit={handleSubmit} className="add-form">
       <input
         type="text"
         placeholder="Name"
